@@ -1,0 +1,19 @@
+<p>cart-details works!</p>
+<h2>Cart Details</h2> 
+
+<hr/>
+<div *ngIf="cart">
+  <div>
+    <label><b>User Id: </b></label> {{cart.id}}
+  </div>
+  <div>
+    <label><b>quantity: </b></label> {{cart.quantity}}
+  </div>
+  <div>
+    <label><b>Item Id: </b></label> {{cart.itemId}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Cart List</button><br>

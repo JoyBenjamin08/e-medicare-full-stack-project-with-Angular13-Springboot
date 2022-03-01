@@ -1,0 +1,130 @@
+<!-- 
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>medicine List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>medName</th>
+            <th>description</th>
+            <th>expDate</th>
+            <th>manfDate</th>
+            <th>id</th>
+            <th>status</th>
+            <th>price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let medicine of medicines | async">
+            <td>{{medicine.medName}}</td>
+            <td>{{medicine.description}}</td>
+            <td>{{medicine.expDate}}</td>
+            <td>{{medicine.manfDate}}</td>
+            <td>{{medicine.id}}</td>
+            <td>{{medicine.status}}</td>
+            <td>{{medicine.price}}</td>
+            <td><button (click)="deleteMedicine(medicine.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateMedicine(medicine.id)" class="btn btn-info">Edit</button>
+                <button (click)="MedicineDetails(medicine.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> -->
+
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css /> -->
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+          <div class="panel">
+              <div class="panel-heading">
+                  <div class="row">
+                      <div class="col col-sm-3 col-xs-12">
+                          <h4 class="title">Medicine <span>List</span></h4>
+                      </div>
+                      <div class="col-sm-9 col-xs-12 text-right">
+                          <div class="btn_group">
+                              <!-- <input type="text" class="form-control" placeholder="Search">
+                              <button class="btn btn-default" title="Reload"><i class="fa fa-sync-alt"></i></button>
+                              <button class="btn btn-default" title="Pdf"><i class="fa fa-file-pdf"></i></button>
+                              <button class="btn btn-default" title="Excel"><i class="fas fa-file-excel"></i></button> -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="panel-body table-responsive">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                            <th>medName</th>
+                            <th>description</th>
+                            <th>expDate</th>
+                            <th>manfDate</th>
+                            <th>id</th>
+                            <th>status</th>
+                            <th>price</th>
+                            <th>Actions</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let medicine of medicines | async">
+                            <td>{{medicine.medName}}</td>
+                            <td>{{medicine.description}}</td>
+                            <td>{{medicine.expDate}}</td>
+                            <td>{{medicine.manfDate}}</td>
+                            <td>{{medicine.id}}</td>
+                            <td>{{medicine.status}}</td>
+                            <td>{{medicine.price}}</td>
+                              <td>
+                                  <ul class="action-list">
+                                      <li><a  (click)="updateMedicine(medicine.id)" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                                      <li><a  (click)="deleteMedicine(medicine.id)" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                                     <li> <button (click)="MedicineDetails(medicine.id)" class="btn btn-info" style="margin-left: 10px">Details</button></li>
+                                  </ul>
+                              </td>
+                          </tr>
+                          <!-- <tr *ngFor="let medicine of medicines | async">
+                            <td>{{medicine.medName}}</td>
+                            <td>{{medicine.description}}</td>
+                            <td>{{medicine.expDate}}</td>
+                            <td>{{medicine.manfDate}}</td>
+                            <td>{{medicine.id}}</td>
+                            <td>{{medicine.status}}</td>
+                            <td>{{medicine.price}}</td>
+                            <td><button  class="btn btn-danger">Delete</button>
+                              <button  class="btn btn-info">Edit</button>
+                                <button (click)="MedicineDetails(medicine.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                            </td>
+                          </tr> -->
+                      </tbody>
+                  </table>
+              </div>
+              <div class="panel-footer">
+                  <div class="row">
+                      <!-- <div class="col col-sm-6 col-xs-6">showing <b>5</b> out of <b>25</b> entries</div> -->
+                      <div class="col-sm-6 col-xs-6">
+                          <!-- <ul class="pagination hidden-xs pull-right">
+                              <li><a href="#"><</a></li>
+                              <li class="active"><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li><a href="#">></a></li>
+                          </ul>
+                          <ul class="pagination visible-xs pull-right">
+                              <li><a href="#"><</a></li>
+                              <li><a href="#">></a></li>
+                          </ul> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

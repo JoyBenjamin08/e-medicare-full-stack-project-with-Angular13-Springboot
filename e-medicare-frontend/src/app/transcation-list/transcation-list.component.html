@@ -1,0 +1,31 @@
+<p>transcation-list works!</p><div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Transaction Status Details</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>transact_id</th>
+            <th>user_id</th>
+            <th>order_Id</th>
+            <th>trans_date</th>
+            <th>price</th>
+            <th>stat</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaction of transtatus | async">
+              <td>{{transaction.userid}}</td>
+              <td>{{transaction.orderid}}</td>
+              <td>{{transaction.transdate}}</td>
+              <td>{{transaction.price}}</td>
+              <td>{{transaction.stat}}</td>
+              <td> <button (click)="getTransactions()" class="btn btn-info" style="margin-left: 10px">Details</button>/td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+

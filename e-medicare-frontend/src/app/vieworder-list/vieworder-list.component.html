@@ -1,0 +1,31 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Vieworder List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>OrderId</th>
+            <th>UserId</th>
+            <th>TotalPrice</th>
+            <th>OrderDate</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vieworder of vieworders | async">
+            <td>{{vieworder.orderid}}</td>
+            <td>{{vieworder.userid}}</td>
+            <td>{{vieworder.totalprice}}</td>
+            <td>{{vieworder.orderdate}}</td>
+            <td><button (click)="deleteVieworder(vieworder.orderid)" class="btn btn-danger">Delete</button>
+              <button (click)="updateVieworder(vieworder.orderid)" class="btn btn-info">Edit</button>
+                <button (click)="VieworderDetails(vieworder.orderid)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

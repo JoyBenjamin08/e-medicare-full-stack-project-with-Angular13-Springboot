@@ -1,0 +1,85 @@
+<!-- <p>medicine-details works!</p>
+<p>medicine-details works!</p>
+<h2>medicine-details </h2> 
+
+<hr/>
+<div *ngIf="medicine">
+  <div>
+    <label><b>medName: </b></label> {{medicine.medName}}
+  </div>
+  <div>
+    <label><b>description: </b></label> {{medicine.description}}
+  </div>
+  <div>
+    <label><b>expDate: </b></label> {{medicine.expDate}}
+  </div> 
+  <div>
+    <label><b>manfDate: </b></label> {{medicine.manfDate}}
+  </div>  
+  <div>
+    <label><b>id: </b></label> {{medicine.id}}
+  </div>  
+  <div>
+    <label><b>status: </b></label> {{medicine.status}}
+  </div>  
+  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to medicine List</button><br> -->
+
+
+
+<html>
+
+<body>
+  <main>
+    <div class="card" *ngIf="medicine">
+      <div class="card__title">
+        <div class="icon">
+          <a (click)="list()"><i class="fa fa-arrow-left"></i></a>
+        </div>
+        <h3>ProductID : {{medicine.id}}</h3>
+      </div>
+      <div class="card__body">
+        <div class="half">
+          <div class="featured_text">
+            <h1>{{medicine.medName}}</h1>
+            <p class="sub"></p>
+            <p class="price">${{medicine.price}}</p>
+          </div>
+          <div class="image">
+            <img src="https://th.bing.com/th/id/OIP.VDejbNC8mG2bU2dN7IvyogHaE8?pid=ImgDet&rs=1" alt="">
+          </div>
+        </div>
+        <div class="half">
+          <div class="description">
+            <p>{{medicine.description}}</p>
+          </div>
+          <span class="stock"><i class="fa fa-pen"></i> {{medicine.status}}</span>
+          <div class="reviews">
+            <ul class="stars">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star-o"></i></li>
+            </ul>
+            <span>(64 reviews)</span>
+          </div>
+        </div>
+      </div>
+      <div class="card__footer">
+        <div class="recommend">
+          <p>exp_date:  {{medicine.expDate}} mfd: {{medicine.manfDate}} </p>
+        </div>
+        <div class="action">
+          <!-- <button type="button">Add to cart</button> -->
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<p>update-vieworder works!</p>
+<h3>Update vieworder</h3>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Order Id</label>
+        <input type="text" class="form-control" id="orderid" required [(ngModel)]="vieworder.orderid" name="orderid">
+      </div>
+    <div class="form-group">
+      <label for="name">User Id</label>
+      <input type="text" class="form-control" id="userid" required [(ngModel)]="vieworder.userid" name="userid">
+    </div>
+
+    
+
+    <div class="form-group">
+      <label for="name">Total Price</label>
+      <input type="text" class="form-control" id="totalprice" required [(ngModel)]="vieworder.totalprice" name="totalprice">
+    </div>
+    <div class="form-group">
+        <label for="name">Order Date</label>
+        <input type="text" class="form-control" id="orderdate" required [(ngModel)]="vieworder.orderdate" name="orderdate">
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+

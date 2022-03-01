@@ -1,0 +1,22 @@
+<p>transcation-details works!</p>
+<h2>Transaction details</h2>
+<div *ngIf="transaction">
+    <div>
+        <label><b>User Id:</b></label>{{transaction.userid}}
+    </div>
+    <div>
+        <label><b>Order Id:</b></label>{{transaction.orderid}}
+    </div>
+    <div>
+        <label><b>Transaction Date:</b></label>{{transaction.transdate}}
+    </div>
+    <div>
+        <label><b>Price:</b></label>{{transaction.price}}
+    </div>
+    <div>
+        <label><b>Transaction Status:</b></label>{{transaction.stat}}
+    </div>
+    <br>
+    <br>
+    <button (click)="list()" class="btn btn-primary">Back to Employee List</button><br>
+</div>

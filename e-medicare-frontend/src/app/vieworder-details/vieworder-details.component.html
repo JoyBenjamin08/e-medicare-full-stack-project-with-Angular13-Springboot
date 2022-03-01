@@ -1,0 +1,22 @@
+<p>vieworder-details works!</p>
+<h2>Vieworder Details</h2> 
+
+<hr/>
+<div *ngIf="vieworder">
+  <div>
+    <label><b>Order Id: </b></label> {{vieworder.orderid}}
+  </div>
+  <div>
+    <label><b>User Id: </b></label> {{vieworder.userid}}
+  </div>
+  <div>
+    <label><b>TotalPrice: </b></label> {{vieworder.totalprice}}
+  </div> 
+  <div>
+    <label><b>OrderDate: </b></label> {{vieworder.orderdate}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to ViewOrder List</button><br>

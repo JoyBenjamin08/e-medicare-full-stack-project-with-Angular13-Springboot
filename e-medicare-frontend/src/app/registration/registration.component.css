@@ -1,0 +1,50 @@
+.enroll{
+	background: rgba(248, 248, 160, 0.73);
+	width: 25%;
+  
+	border-radius: 20px;
+	padding: 20px 30px;
+	margin: auto;
+  
+	box-shadow: #414a74 20px 20px 10px;
+  }
+
+  input[type="text"] {
+	width: 100%;
+	padding: 8px 8px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+  }
+  
+  input[type="password"] {
+	width: 100%;
+	padding: 8px 8px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+  }
+  input[type="submit"] {
+	width: 100%;
+	background: rgba(248, 248, 160, 0.73);
+	color: white;
+	padding: 8px 8px;
+	margin: 8px 8px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+	background: rgba(248, 248, 160, 0.73);
+  }
+  
+  
+  span {
+	color: red;
+  }
+  
+  .divide {
+	display: flex;
+	justify-content: space-evenly;
+  }

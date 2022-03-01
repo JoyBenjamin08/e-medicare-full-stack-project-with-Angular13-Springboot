@@ -1,0 +1,141 @@
+<!-- <html>
+
+<body>
+  <main>
+    <div class="card" *ngFor="let medicine of medicines | async">
+      <div class="card__title">
+        <div class="icon">
+          <a (click)="list()"><i class="fa fa-arrow-left"></i></a>
+        </div>
+        <h3>ProductID : {{medicine.id}}</h3>
+      </div>
+      <div class="card__body">
+        <div class="half">
+          <div class="featured_text">
+            <h1>{{medicine.medName}}</h1>
+            <p class="sub"></p>
+            <p class="price">${{medicine.price}}</p>
+          </div>
+          <div class="image">
+            <img src="https://www.collinsdictionary.com/images/full/medicine_524556844_1000.jpg" alt="">
+          </div>
+        </div>
+        <div class="half">
+          <div class="description">
+            <p>{{medicine.description}}</p>
+          </div>
+          <span class="stock"><i class="fa fa-pen"></i> {{medicine.status}}</span>
+          <div class="reviews">
+            <ul class="stars">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star-o"></i></li>
+            </ul>
+            <span>(64 reviews)</span>
+          </div>
+        </div>
+      </div>
+      <div class="card__footer">
+        <div class="recommend">
+          <p>exp_date:  {{medicine.expDate}} mfd: {{medicine.manfDate}} </p>
+        </div>
+        <div class="action">
+          <button type="button">Add to cart</button>
+          < <button (click)="CartBuy(medicine.id)"  style="margin-left: 10px">Details</button> -->
+        <!-- </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html> -->
+<div class="wrapper" *ngFor="let medicine of medicines | async">
+  <div class="container" >
+    <div class="top"></div>
+    <div class="bottom">
+      <div class="left">
+        <div class="details">
+          <h3>{{medicine.medName}}</h3>
+          <p>${{medicine.price}}</p>
+        </div>
+        <div class="buy">
+          <form (ngSubmit)="onSubmit()">
+          <input type="number"id="id" required [(ngModel)]="cart.id" #userId="ngModel" name="userId">
+          <input type="number"  id="quantity" required [(ngModel)]="cart.quantity" #quantity="ngModel" name="quantity">
+          <input type="number"  id="itemId" required [(ngModel)]="cart.itemId" name="itemId">
+          <button type="submit" class="btn btn-success">Add</button></form>
+        </div>
+      </div>
+      <!-- <div class="right">
+        <div class="done"><i class="material-icons">done</i></div>
+        <div class="details">
+          <h3>{{medicine.medName}}</h3>
+          <p>Added to your cart</p>
+        </div>
+        <div class="remove"><i class="material-icons">clear</i></div>
+      </div> -->
+    </div>
+  </div>
+  <div class="inside">
+    <div class="icon"><i class="material-icons">info_outline</i></div>
+    <div class="contents">
+      <table>
+        <tr>
+          <th>medname :</th>
+          <th>description :</th>
+        </tr>
+        <tr>
+          <td>{{medicine.medName}}</td>
+          <td>{{medicine.description}}</td>
+        </tr>
+        <tr>
+          <th>EXP dt</th>
+          <th>MFD dt</th>
+        </tr>
+        <tr>
+          <td>{{medicine.expDate}}</td>
+          <td>{{medicine.manfDate}}</td>
+        </tr>
+        <tr>
+          <th>ProductID</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>{{medicine.id}}</td>
+          <td>{{medicine.price}}</td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+ 
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js">$.innerHTML('.buy').click(function(){
+    $('.bottom').addClass("clicked");
+  });
+  
+  $('.remove').click(function(){
+    $('.bottom').removeClass("clicked");
+  });</script>
+</div>
+
+
+<!-- <form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="user_id">User ID</label>
+    <input type="number" class="form-control" id="id" required [(ngModel)]="cart.id" #userId="ngModel" name="userId">
+  </div>
+
+  <div class="form-group">
+    <label for="quantity">quantity</label>
+    <input type="number" class="form-control" id="quantity" required [(ngModel)]="cart.mei" #quantity="ngModel" name="quantity">
+  </div>
+
+  <div class="form-group">
+    <label for="item_id">Item Id</label>
+    <input type="number" class="form-control" id="itemId" required [(ngModel)]="cart.itemId" name="itemId">
+  </div>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+</form> -->

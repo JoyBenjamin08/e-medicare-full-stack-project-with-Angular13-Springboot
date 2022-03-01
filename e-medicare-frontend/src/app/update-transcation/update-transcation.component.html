@@ -1,0 +1,25 @@
+<p>update-transcation works!</p>
+<h2>update-transaction works!</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+            <label for="name">Order Id:</label>
+            <input type="text" class="form-control" id="orderid" required [(ngModel)]="transaction.orderid" name="orderid">
+        </div>
+        <div class="form-group">
+            <label for="name">User Id:</label>
+            <input type="text" class="form-control" id="userid" required [(ngModel)]="transaction.userid" name="userid">
+        </div>
+        <div class="form-group">
+            <label for="name">Transaction Date:</label>
+            <input type="text" class="form-control" id="transdate" required [(ngModel)]="transaction.transdate" name="transdate">
+        </div>
+        <div class="form-group">
+            <label for="name">User Id:</label>
+            <input type="text" class="form-control" id="price" required [(ngModel)]="transaction.price" name="price">
+        </div>
+        <div class="form-group">
+            <label for="name">User Id:</label>
+            <input type="text" class="form-control" id="stat" required [(ngModel)]="transaction.stat" name="stat">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+  </form>

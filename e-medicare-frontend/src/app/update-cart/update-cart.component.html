@@ -1,0 +1,21 @@
+<p>update-cart works!</p>
+<h3>Update Cart</h3>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">User Id</label>
+      <input type="text" class="form-control" id="id" required [(ngModel)]="cart.id" name="user_id">
+    </div>
+
+    <div class="form-group">
+      <label for="name">quantity</label>
+      <input type="text" class="form-control" id="quantity" required [(ngModel)]="cart.quantity" name="quantity">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Item Id</label>
+      <input type="text" class="form-control" id="itemId" required [(ngModel)]="cart.itemId" name="item_id">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>

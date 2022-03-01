@@ -1,0 +1,101 @@
+<!-- 
+<h3>Add medicine</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">medName</label>
+      <input type="text" class="form-control" id="medName" required [(ngModel)]="medicine.medName" #firstName="ngModel" name="medName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">description</label>
+      <input type="text" class="form-control" id="description" required [(ngModel)]="medicine.description" #lastName="ngModel" name="description">
+    </div>
+
+    <div class="form-group">
+      <label for="name">expDate</label>
+      <input type="text" class="form-control" id="expDate" required [(ngModel)]="medicine.expDate" name="expDate">
+    </div>
+    <div class="form-group">
+        <label for="name">manfDate</label>
+        <input type="text" class="form-control" id="manfDate" required [(ngModel)]="medicine.manfDate" name="manfDate">
+      </div>
+      <div class="form-group">
+        <label for="name"> id</label>
+        <input type="text" class="form-control" id=" id" required [(ngModel)]="medicine.id" name=" id">
+      </div>
+      <div class="form-group">
+        <label for="name">status</label>
+        <input type="text" class="form-control" id="status" required [(ngModel)]="medicine.status" name="status">
+      </div>
+      <div class="form-group">
+        <label for="name">price</label>
+        <input type="text" class="form-control" id="price" required [(ngModel)]="medicine.price" name="price">
+      </div>
+
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+ -->
+<!-- <div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <button class="btn btn-success" (click)="newViewOrders()">Add</button> 
+</div> -->
+<div class="container-fluid px-1 py-5 mx-auto">
+  <alert></alert>
+  <div class="row d-flex justify-content-center">
+      <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+          <h3>ADD meds</h3>
+         
+          <div class="card">
+              <h5 class="text-center mb-4">Medicines</h5>
+              <form  class="form-card" (ngSubmit)="onSubmit()">
+              
+                  <div class="row justify-content-between text-left">
+                      <div class="form-group col-sm-6 flex-column d-flex"> 
+                        <label class="form-control-label px-3">medname<span class="text-danger"> *</span></label>
+                        <input type="text" class="form-control" id="medName" required [(ngModel)]="medicine.medName" #firstName="ngModel" name="medName" placeholder = "">
+
+                         </div>
+                      <div class="form-group col-sm-6 flex-column d-flex"> 
+                        <label class="form-control-label px-3">MFD<span class="text-danger"> *</span></label> 
+                        
+                        <input type="text" class="form-control" id="manfDate" required [(ngModel)]="medicine.manfDate" name="manfDate" placeholder="" onblur="validate(2)"> </div>
+                  </div>
+                  <div class="row justify-content-between text-left">
+                      <div class="form-group col-sm-6 flex-column d-flex">
+                         <label class="form-control-label px-3">MedID<span class="text-danger"> *</span></label> 
+                         
+                         <input type="text" class="form-control" id=" id" required [(ngModel)]="medicine.id" name=" id" placeholder="" onblur="validate(3)"> </div>
+                      <div class="form-group col-sm-6 flex-column d-flex">
+                         <label class="form-control-label px-3">Status<span class="text-danger"> *</span></label>
+                         
+                         <input type="text" class="form-control" id="status" required [(ngModel)]="medicine.status" name="status" placeholder="" onblur="validate(4)"> </div>
+                  </div>
+                  <div class="row justify-content-between text-left">
+                      <div class="form-group col-sm-6 flex-column d-flex">
+                         <label class="form-control-label px-3">Price<span class="text-danger"> *</span></label>
+                         
+                         <input type="text" class="form-control" id="price" required [(ngModel)]="medicine.price" name="price" placeholder="" onblur="validate(5)"> </div>
+                         <div class="form-group col-sm-6 flex-column d-flex">
+                          <label class="form-control-label px-3">EXPD<span class="text-danger"> *</span></label>
+                          
+                          <input type="text" class="form-control" id="expDate" required [(ngModel)]="medicine.expDate" name="expDate" placeholder="" onblur="validate(1)"> </div>
+                        </div>
+                  <div class="row justify-content-between text-left">
+                      <div class="form-group col-12 flex-column d-flex">
+                         <label class="form-control-label px-3">description of the medicine?<span class="text-danger"> *</span></label> 
+                         <input type="text" class="form-control" id="description" required [(ngModel)]="medicine.description"  name="description" placeholder="" onblur="validate(6)"> </div>
+                 
+                 
+                        </div>
+                  <div class="row justify-content-end">
+                      <div class="form-group col-sm-6"> <button type="submit" class="btn btn-success" (click)="alertService.success('Success!!', options)">Submit</button> </div>
+                  </div>
+              </form>
+
+          </div>
+      </div>
+  </div>
